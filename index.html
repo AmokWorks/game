@@ -3,7 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=0.4, maximum-scale=0.4, minimum-scale=0.4, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" integrity="sha512-V5nU6y3UzNUxCxUJEwZK8sD/eRU9TlUzJ6q3K6vzp6xuGJLZp7rW8rvHV7zE5hg/r7zW8KvjH7Fc5xjK5w5LZw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script>
+        window.addEventListener('load', async () => {
+            window.supabase = Supabase
+        });
+    </script>
     <title>Chrome Dino</title>
     <style>
       * {
@@ -22,24 +31,30 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+        touch-action: manipulation;
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer */
+        user-select: none; /* Standard syntax */
+
       }
       h1 {
         margin-bottom: 3rem ;
       }
 
-      @keyframes octocat-wave {
-        0%, 100% { transform: rotate(0) }
-        20%, 60% { transform: rotate(-25deg) }
-        40%, 80% { transform: rotate(10deg) }
+      #wrapper {
+        position: absolute;
+        bottom: 20rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
       }
 
-      .github-corner:hover .octo-arm {
-        animation: octocat-wave 560ms ease-in-out;
-      }
     </style>
   </head>
   <body>
-    <h1>RUNAWAY AS FAST AS YOU CAN</h1>
+    <h1>RUNNIN' AMOK</h1>
     <script type="module" src="./lib/index.js"></script>
+    <div id="wrapper" />
   </body>
 </html>

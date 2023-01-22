@@ -12,5 +12,9 @@
   "volta": {
     "node": "16.15.0",
     "yarn": "1.22.18"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.4.1",
+    "axios": "^1.2.3"
   }
 }
