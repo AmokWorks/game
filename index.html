@@ -13,7 +13,7 @@
             window.supabase = Supabase
         });
     </script>
-    <title>Chrome Dino</title>
+    <title>Running Amok</title>
     <style>
       * {
         margin: 0;
@@ -40,6 +40,17 @@
       }
       h1 {
         margin-bottom: 3rem ;
+      }
+
+      .my-button {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+      }
+      .my-button:hover, .my-button:focus, .my-button:active {
+        /* pointer-events: none; */
+        background-color: transparent !important; /* or any other css property you want to remove */
+        outline: none !important;
+        box-shadow: none !important;
+        opacity: 0;
       }
 
       #wrapper {
